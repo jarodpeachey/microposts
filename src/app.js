@@ -1,10 +1,6 @@
-const greeting = 'Hello World';
-console.log(greeting);
+const person1 = require('./mod1');
+import { person, sayHello } from './mod2';
 
-const getData = async (url) => {
-  const response = await fetch(url);
-  const result = await response.json();
-  console.log(result);
-};
-
-getData('https://jsonplaceholder.typicode.com/posts');
+console.log(person1);
+console.log(person);
+console.log(sayHello());
