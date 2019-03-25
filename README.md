@@ -1,1 +1,0 @@
-# Microposts project
