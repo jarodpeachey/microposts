@@ -20,8 +20,10 @@ a.no-action {
 }
 
 .card {
-   box-shadow: 1px 1px 8px 1px #e7e7e7;
+   box-shadow: 1px 1px 10px 0px rgb(245, 245, 245);
    border-radius: 4px;
+   margin: 20px 0px 20px 0px;
+   border: 1px solid #e3e3e3;
 }
 
 .card-body {
@@ -31,4 +33,16 @@ a.no-action {
 ::placeholder, textarea::placeholder {
    color: #919191 !important;
    font-weight: 700 !important;
+}
+
+a:hover {
+   box-shadow: none;
+}
+
+.delete {
+   color: rgba(255, 78, 78, 0.705) !important;
+}
+
+.edit {
+   color: rgba(74, 114, 243, 0.822);
 }
