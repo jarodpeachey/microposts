@@ -38,7 +38,7 @@ class PeachHTTP {
             'Content-type': 'application/json'
          },
          body: JSON.stringify(userData)
-      })
+      });
 
       const responseData = await 'Resource deleted succesfully';
       return responseData;

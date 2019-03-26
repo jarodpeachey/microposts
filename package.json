@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --output-public-path=/build/ --mode development --progress --open --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --progress",
-    "json:server": "json-server --watch api/db.json"
+    "json:server": "json-server --watch api/db.json --port 8082"
   },
   "author": "Jarod Peachey",
   "license": "MIT",
