@@ -24,13 +24,15 @@ function getPosts() {
 function submitPost() {
    let title = ui.titleInput.value;
    let body = ui.bodyInput.value;
+   let userId = 2;
    let date = `${new Date().getMonth()}/${new Date().getDate()}/${new Date().getFullYear()}`;
 
    // Set new post object
    const data = {
       title,
       body,
-      date
+      date,
+      userId
    }
 
    // Create post in API
