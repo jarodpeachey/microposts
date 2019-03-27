@@ -20,7 +20,7 @@ class UI {
                   <a href="#" class="delete float-right" data-id="${post.id}"><i class="fa fa-trash-alt"></i></a>
                   <a href="#" class="edit float-right pr-2" data-id="${post.id}"><i class="fa fa-pencil-alt"></i></a>
                </div>
-               <small class="subtitle mt-0 pt-0">Posted on 12/12/26</small>
+               <small class="subtitle mt-0 pt-0">Posted on ${post.date}</small>
                <p>${post.body}</p>
 
             </div>
