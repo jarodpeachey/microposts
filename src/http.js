@@ -33,7 +33,7 @@ class PeachHTTP {
    }
  
    // Make an HTTP DELETE Request
-   async delete(url) {
+   async Delete(url) {
      const response = await fetch(url, {
        method: "DELETE",
        headers: {
