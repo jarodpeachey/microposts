@@ -30,11 +30,6 @@ a.no-action {
    padding: 20px;
 }
 
-::placeholder, textarea::placeholder {
-   color: #919191 !important;
-   font-weight: 700 !important;
-}
-
 a:hover {
    box-shadow: none;
 }
