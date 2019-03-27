@@ -28,6 +28,8 @@ function submitPost() {
    http.post('http://localhost:8082/posts', data)
       .then(data => {
          getPosts();
+         ui.showAlert('Post added successfully', 'alert success')
+         ui.clearForm();
       })
       .catch(err => console.log(err))
 }

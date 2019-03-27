@@ -46,3 +46,13 @@ a:hover {
 .edit {
    color: rgba(74, 114, 243, 0.822);
 }
+
+.alert {
+   padding: 15px;
+   border-radius: 5px;
+}
+
+.alert.success {
+   background: rgba(133, 224, 133, 0.89);
+   color: green;
+}
