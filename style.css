@@ -51,3 +51,8 @@ a:hover {
    background: rgba(133, 224, 133, 0.89);
    color: green;
 }
+
+.alert.danger {
+   background: rgba(201, 150, 150, 0.89);
+   color: rgb(202, 14, 14);
+}

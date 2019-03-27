@@ -60,6 +60,9 @@ class UI {
       this.titleInput.value = '';
       this.bodyInput.value = '';
    }
+   removePost(post) {
+      post.remove();
+   }
 }
 
 export const ui = new UI();
