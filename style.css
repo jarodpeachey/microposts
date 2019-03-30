@@ -45,6 +45,7 @@ a:hover {
 .alert {
    padding: 15px;
    border-radius: 5px;
+   font-weight: 500;
 }
 
 .alert.success {
@@ -53,6 +54,6 @@ a:hover {
 }
 
 .alert.danger {
-   background: rgba(201, 150, 150, 0.89);
-   color: rgb(202, 14, 14);
+   background: rgba(243, 200, 200, 0.89);
+   color: rgb(236, 14, 14);
 }
