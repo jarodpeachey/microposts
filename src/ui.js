@@ -63,6 +63,39 @@ class UI {
    removePost(post) {
       post.remove();
    }
+   fillForm(data) {
+      this.titleInput.value = data.title;
+      this.bodyInput.value = data.body;
+      this.idInput.value = data.id;
+
+      this.changeState('edit');
+   }
+   clearIdInput() {
+      this.idInput.value = '';
+   }
+   changeState(type) {
+      if(type === 'edit') {
+         this.postSubmit.textContent = 'Update post';
+         this.postSubmit.className = 'post-submit success';
+
+         // Create cancel button
+         const button = document.createElement('button');
+         button.className = 'light m-0 cancel-btn';
+         button.appendChild(document.createTextNode('Cancel'));
+
+         // Insert button
+         const cardForm = document.querySelector('.card-form');
+         const formEnd = document.querySelector('.form-end');
+         cardForm.insertBefore(button, formEnd);
+      } else {
+         this.postSubmit.textContent = 'Post Message';
+         this.postSubmit.className = 'post-submit primary';
+         document.querySelector('.cancel-btn').remove();
+
+         this.clearForm();
+         this.clearIdInput();
+      }
+   }
 }
 
 export const ui = new UI();
