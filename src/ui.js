@@ -30,24 +30,29 @@ class UI {
       })
    }
    showAlert(msg, classList) {
-      // Create div
-      const div = document.createElement('div');
+      if (document.querySelector('.alert')) {
+         // Do nothing
+      } else {
+         // Create div
+         const div = document.createElement('div');
 
-      // Add classnames
-      div.classList = classList;
+         // Add classnames
+         div.classList = classList;
 
-      // Append message
-      div.appendChild(document.createTextNode(msg));
+         // Append message
+         div.appendChild(document.createTextNode(msg));
 
-      // Insert it into the DOM
-      const parent = document.querySelector('.postsContainer');
-      const posts = document.querySelector('#posts');
+         // Insert it into the DOM
+         const parent = document.querySelector('.postsContainer');
+         const posts = document.querySelector('#posts');
 
-      parent.insertBefore(div, posts);
+         parent.insertBefore(div, posts);
 
-      setTimeout(() => {
-         this.clearAlert();
-      }, 2000)
+         setTimeout(() => {
+            this.clearAlert();
+         }, 2000)
+      }
+
    }
    clearAlert() {
       const currentAlert = document.querySelector('.alert');
@@ -74,7 +79,7 @@ class UI {
       this.idInput.value = '';
    }
    changeState(type) {
-      if(type === 'edit') {
+      if (type === 'edit') {
          this.postSubmit.textContent = 'Update post';
          this.postSubmit.className = 'post-submit success';
 

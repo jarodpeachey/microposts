@@ -34,32 +34,36 @@ function submitPost() {
    let id = ui.idInput.value;
    let date = `${new Date().getMonth()}/${new Date().getDate()}/${new Date().getFullYear()}`;
 
-   // Set new post object
-   const data = {
-      title,
-      body,
-      date
-   }
-
-   if (id === '') {
-      // Create post in API
-      http.post('http://localhost:8082/posts', data)
-         .then(data => {
-            getPosts();
-            ui.showAlert('Post added successfully', 'alert success')
-            ui.clearForm();
-         })
-         .catch(err => console.log(err))
+   if (title === '' || body === '') {
+      ui.showAlert('Please enter a title and/or body', 'danger alert');
    } else {
-      //Update post
-      http.put(`http://localhost:8082/posts/${id}`, data)
-         .then(data => {
-            getPosts();
-            ui.showAlert('Post updated successfully', 'alert success')
-            ui.changeState('add');
-            getPosts();
-         })
-         .catch(err => console.log(err))
+      // Set new post object
+      const data = {
+         title,
+         body,
+         date
+      }
+
+      if (id === '') {
+         // Create post in API
+         http.post('http://localhost:8082/posts', data)
+            .then(data => {
+               getPosts();
+               ui.showAlert('Post added successfully', 'alert success')
+               ui.clearForm();
+            })
+            .catch(err => console.log(err))
+      } else {
+         //Update post
+         http.put(`http://localhost:8082/posts/${id}`, data)
+            .then(data => {
+               getPosts();
+               ui.showAlert('Post updated successfully', 'alert success')
+               ui.changeState('add');
+               getPosts();
+            })
+            .catch(err => console.log(err))
+      }
    }
 }
 
